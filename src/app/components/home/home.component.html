@@ -1,0 +1,6 @@
+<h1 class="display-3">Spotiapp</h1>
+<app-loading *ngIf="loading"></app-loading>
+
+<app-error *ngIf="error" [error]="mensajeError"></app-error>
+
+<app-tarjetas [items]='nuevasCanciones'></app-tarjetas>

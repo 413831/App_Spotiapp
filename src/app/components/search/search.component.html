@@ -1,0 +1,10 @@
+<h1 class="display-4 m-4 ">Busque a su artista favorito</h1>
+<div class="row">
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista">
+    </div>
+</div>
+
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<app-error *ngIf="error" [error]="mensajeError"></app-error>
+<app-tarjetas *ngIf="!loading" [items]='artistas'></app-tarjetas>
