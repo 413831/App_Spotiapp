@@ -1,7 +1,7 @@
 # Spotiapp
-![Logo](https://firebasestorage.googleapis.com/v0/b/web-apps---practica.appspot.com/o/banner-ico.png?alt=media&token=510febc1-6cd6-4f52-87ad-89af00aa7055) 
 
 Aplicación cliente de API de Spotify. Esta aplicación fue desarrollada utilizando componentes de Angular 9 + Bootstrap 5 con fines educativos.
+Al final de este documento se encuentra el link a una versión de prueba de la aplicación.
 
 ## Home
 
