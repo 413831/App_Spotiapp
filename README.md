@@ -1,4 +1,4 @@
-# Spotiapp
+# :musical_note: Spotiapp
 
 Aplicación cliente de API de Spotify. Esta aplicación fue desarrollada utilizando componentes de Angular 9 + Bootstrap con fines educativos.
 Al final de este documento se encuentra el link a una versión de prueba de la aplicación.
