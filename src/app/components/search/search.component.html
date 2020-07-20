@@ -1,4 +1,4 @@
-<h1 class="display-4 m-4 ">Busque a su artista favorito</h1>
+<h1 class="display-4 m-4 "> <i class="fas fa-compact-disc"></i> Busque a su artista favorito</h1>
 <div class="row">
     <div class="col">
         <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista">
@@ -6,5 +6,8 @@
 </div>
 
 <app-loading *ngIf="loading" class="m-5"></app-loading>
-<app-error *ngIf="error" [error]="mensajeError"></app-error>
+<!-- <app-error *ngIf="error" [error]="mensajeError" class="m-5"></app-error> -->
+<div *ngIf="searching">
+    <p class="lead m-5 animated fadeIn">Ingrese el nombre de su artista favorito para poder ver sus últimos lanzamientos</p>
+</div>
 <app-tarjetas *ngIf="!loading" [items]='artistas'></app-tarjetas>

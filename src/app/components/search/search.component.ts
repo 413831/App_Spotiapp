@@ -11,26 +11,29 @@ export class SearchComponent {
   loading: boolean;
   error: boolean;
   mensajeError: string;
+  searching: boolean;
 
   constructor( private spotify: SpotifyService ) 
   {
-    
+    this.searching = true;
   }
 
   buscar(termino: string)
   { 
-    this.loading = true;
+    this.searching = false;
+    
+    if(termino.length > 0)
+    {
+      this.loading = true;
 
-    console.log(termino);
-    this.spotify.getArtists(termino)
-                .subscribe( data => {
-                  this.artistas = data;
-                  this.loading = false;
-                }, (error) => {
-                  this.loading = false;
-                  this.error = true;
-                  this.mensajeError = error.error.error.message;
-              });
+      this.spotify.getArtists(termino)
+                  .subscribe( data => {
+                    this.artistas = data;
+                    this.loading = false;
+                    this.searching = this.artistas.length > 0 ? false : true;
+                  });
+    }
+
   }
 
 }
