@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="row m-5" *ngIf="!loading">
+<div class="row mt-5" *ngIf="!loading">
     <div class="col">
         <table class="table text-light text-center">
             <thead class="thead-dark">
@@ -33,7 +33,7 @@
                     <td>
                         <!-- <audio [src]="track.preview_url" controls></audio> -->
                         <iframe [src]="track.id | domseguro: trackURL" 
-                                width="400" 
+                                width="300" 
                                 height="80" 
                                 frameborder="0"
                                 allowtransparency="true" 
